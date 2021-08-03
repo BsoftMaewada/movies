@@ -2,11 +2,13 @@
 /* ==== External Modules ==== */
 const express = require('express');
 const indexRouter = require('./routes/index');
+const logger = require('morgan');
 /* ==== Internal Modules ==== */
+require('./config/database');
 /* ==== Instanced Modules ==== */
 const app = express();
 /* ==== Configuration ==== */
-const PORT = 6000;
+const PORT = 5000;
 app.set('view engine', 'ejs');
 /* ==== Middleware ==== */
 app.use(logger('dev'));
